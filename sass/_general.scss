@@ -90,11 +90,14 @@ h3 {
 .card {
   padding: 0 4.2rem;
   background: #fff;
-  width: 23.14vw;
-  max-width: 324px;
+
   &__subtitle {
     margin: 4.2rem 0 0.5rem;
     color: $color-accent;
+  }
+
+  &__container {
+    display: flex;
   }
 
   &__heading {
@@ -155,7 +158,8 @@ h3 {
 //Combo
 .combo {
   &__card {
-    margin: 0 auto;
+    flex-direction: column;
+    width: 25.7vw;
     max-width: 360px;
   }
 
@@ -192,19 +196,22 @@ h3 {
   grid-gap: 2.3vw 2vw;
 }
 
+.grid--1x3, .grid--1x4 {
+  grid-column-gap: 2vw;
+}
 .grid--1x3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
 .grid--1x4 {
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 2vw;
 }
 
 //Coffee
 .coffee {
   &__card {
-    display: flex;
+    width: 23.14vw;
+    max-width: 324px;
   }
 
   &__buttons {
