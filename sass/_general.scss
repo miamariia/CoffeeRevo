@@ -81,6 +81,10 @@ h3 {
 //Card
 
 .card {
+  margin: 0 4.2rem;
+  background: #fff;
+  width: fit-content;
+
   &__subtitle {
     margin: 4.2rem 0 0.5rem;
     color: $color-accent;
@@ -88,5 +92,62 @@ h3 {
 
   &__heading {
     margin-bottom: 2.4rem;
+  }
+}
+
+// Image
+.image {
+  align-self: center;
+  background: $color-background;
+  width: fit-content;
+  height: fit-content;
+}
+
+.image > img {
+  width: 100%;
+}
+
+//Coffee Card
+.coffee {
+  &__card {
+    display: flex;
+  }
+
+  &__buttons {
+    margin-top: 3.4rem;
+  }
+}
+
+//Button
+
+.buttons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn--accent {
+  background: $color-accent;
+  color: $color-white;
+  border-radius: 19px;
+  padding: 6px 2.4rem;
+  transition: background-color 0.3s;
+  &:active {
+    background-color: #B99672;
+  }
+}
+
+.btn--primary {
+  padding: 0;
+  background: 0;
+  color: $color-primary;
+  transition: color 0.3s;
+  &:active {
+    color: $color-accent;
   }
 }
