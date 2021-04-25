@@ -39,6 +39,54 @@ h2 {
 
 h3 {
   font-size: 2.4rem;
+  font-weight: 600;
   line-height: 1.1;
+}
+
+//Mini-card 
+.mini-card {
+  max-width: 226px;
+  
+  &__heading, &__description {
+      text-align: center;
+  }
+
+  &__heading {
+      margin-top: 4.2rem;
+  }
+
+  &__description {
+      margin-top: 1.2rem;
+  }
+}
+
+.icon {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+// Section Header
+.section__header {
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+.section__subtitle {
   color: $color-font;
+}
+
+//Card
+
+.card {
+  &__subtitle {
+    margin: 4.2rem 0 0.5rem;
+    color: $color-accent;
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+  }
 }
