@@ -45,7 +45,6 @@ h3 {
 
 //Mini-card
 .mini-card {
-  margin-top: 7.2rem;
   max-width: 226px;
 
   &__heading,
@@ -69,23 +68,30 @@ h3 {
 }
 
 // Section Header
-.section__header {
-  text-align: center;
+.section {
+  background-color: $color-background;
+  padding: 9.14vw 0 6.21vw;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 7.2rem;
+  }
+
+  &__subtitle {
+    color: $color-font;
+  }
 }
 
 .subtitle {
   font-size: 2rem;
 }
-.section__subtitle {
-  color: $color-font;
-}
-
 //Card
 
 .card {
-  margin: 0 4.2rem;
+  padding: 0 4.2rem;
   background: #fff;
-  max-width: fit-content;
+  width: 23.14vw;
+  max-width: 324px;
   &__subtitle {
     margin: 4.2rem 0 0.5rem;
     color: $color-accent;
@@ -103,24 +109,12 @@ h3 {
 // Image
 .image {
   align-self: center;
-  background: $color-background;
-  width: fit-content;
-  height: fit-content;
+  background: #eceff4;
+  height: 100%;
 }
 
 .image > img {
   width: 100%;
-}
-
-//Coffee Card
-.coffee {
-  &__card {
-    display: flex;
-  }
-
-  &__buttons {
-    margin-top: 3.4rem;
-  }
 }
 
 //Button
@@ -195,6 +189,7 @@ h3 {
 
 .grid--1x2 {
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2.3vw 2vw;
 }
 
 .grid--1x3 {
@@ -203,11 +198,16 @@ h3 {
 
 .grid--1x4 {
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 2rem;
+  grid-column-gap: 2vw;
 }
 
-//Features
-.features {
-  background-color: $color-background;
-  padding: 9.14vw 0 6.21vw;
+//Coffee
+.coffee {
+  &__card {
+    display: flex;
+  }
+
+  &__buttons {
+    margin-top: 3.4rem;
+  }
 }
