@@ -83,7 +83,7 @@ h3 {
 .card {
   margin: 0 4.2rem;
   background: #fff;
-  width: fit-content;
+  max-width: fit-content;
 
   &__subtitle {
     margin: 4.2rem 0 0.5rem;
@@ -149,5 +149,26 @@ h3 {
   transition: color 0.3s;
   &:active {
     color: $color-accent;
+  }
+}
+
+
+//Combo
+.combo {
+  &__subtitle {
+    span {
+      color: $color-primary;
+      font-size: 1.4rem;
+      text-decoration: line-through;
+      margin-left: 1.9rem;
+    }
+  }
+
+  &__buttons {
+    margin-top: 3.2rem;
+  }
+
+  &__image {
+    margin: 0 auto;
   }
 }
