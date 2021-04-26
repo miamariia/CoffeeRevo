@@ -288,11 +288,8 @@ h3 {
   background: $color-primary;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
   max-width: 300px;
-  position: absolute;
-  right: 0;
   width: 18%;
 
   &__header {
@@ -317,17 +314,31 @@ h3 {
 
 //Main
 .main {
+  background-color: $color-background;
+  position: relative;
+  display: flex;
+  height: 100vh;
+
   &__image {
-    width: fit-content;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
+.image--logo {
+  margin-top: 7.2rem;
+}
 .heading {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   line-height: 1.2;
-  
+  position: absolute;
+  bottom: 6.4rem;
+  z-index: 2;
+
   &--accent {
     background-color: $color-accent;
     color: #fff;
