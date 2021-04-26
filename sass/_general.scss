@@ -314,3 +314,23 @@ h3 {
     text-decoration: none;
   }
 }
+
+//Main
+.main {
+  &__image {
+    width: fit-content;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  line-height: 1.2;
+  
+  &--accent {
+    background-color: $color-accent;
+    color: #fff;
+    padding: 0.5rem 1rem;
+  }
+}
