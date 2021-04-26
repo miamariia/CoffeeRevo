@@ -152,7 +152,6 @@ h3 {
   background: 0;
 }
 
-
 //Button
 .buttons {
   align-items: center;
@@ -263,5 +262,23 @@ h3 {
 .gift {
   &__buttons {
     justify-items: start;
+  }
+
+  &__card {
+    width: 56.6vw;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 0;
+    &:before {
+      background: #fff;
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+    }
   }
 }
