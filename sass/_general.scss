@@ -83,6 +83,7 @@ h3 {
 }
 
 .subtitle {
+  font-weight: 400;
   font-size: 2rem;
 }
 //Card
@@ -109,8 +110,35 @@ h3 {
   }
 }
 
+// Characteristic
+.characteristic {
+  display: flex;
+  align-items: center;
+  margin: 2.4rem 0 4.6rem;
+
+  &__container {
+    display: flex;
+  }
+
+  &__text {
+    color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+
+  &--remote {
+    margin-right: 5vw;
+  }
+}
+
 // Image
 .image {
+  display: flex;
   align-self: center;
   background: #eceff4;
   height: 100%;
@@ -120,18 +148,26 @@ h3 {
   width: 100%;
 }
 
-//Button
+.image--whole {
+  background: 0;
+}
 
+
+//Button
 .buttons {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-bottom: 4.2rem;
 }
+
 .btn {
-  text-transform: uppercase;
   border: 0;
   cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .btn--accent {
@@ -152,6 +188,49 @@ h3 {
   transition: color 0.3s;
   &:active {
     color: $color-accent;
+  }
+}
+
+.btn--gift {
+  padding: 0 2.4rem;
+}
+
+//Container
+.container {
+  margin: 0 auto;
+  max-width: 1104px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--1x2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2.3vw 2vw;
+}
+
+.grid--1x3,
+.grid--1x4 {
+  grid-column-gap: 2vw;
+}
+.grid--1x3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--1x4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+//Coffee
+.coffee {
+  &__card {
+    width: 23.14vw;
+    max-width: 324px;
+  }
+
+  &__buttons {
+    margin-top: 3.4rem;
   }
 }
 
@@ -181,40 +260,8 @@ h3 {
   }
 }
 
-//Container
-.container {
-  margin: 0 auto;
-  max-width: 1104px;
-}
-
-.grid {
-  display: grid;
-}
-
-.grid--1x2 {
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2.3vw 2vw;
-}
-
-.grid--1x3, .grid--1x4 {
-  grid-column-gap: 2vw;
-}
-.grid--1x3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--1x4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-//Coffee
-.coffee {
-  &__card {
-    width: 23.14vw;
-    max-width: 324px;
-  }
-
+.gift {
   &__buttons {
-    margin-top: 3.4rem;
+    justify-items: start;
   }
 }
