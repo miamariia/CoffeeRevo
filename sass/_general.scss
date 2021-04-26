@@ -282,3 +282,35 @@ h3 {
     }
   }
 }
+
+// Menu
+.nav {
+  background: $color-primary;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  max-width: 300px;
+  position: absolute;
+  right: 0;
+  width: 18%;
+
+  &__header {
+    color: $color-background;
+    font-size: 1.6rem;
+    margin-left: 4vw;
+  }
+}
+
+.list {
+  margin-left: 4vw;
+  padding: 0;
+  list-style: none;
+}
+.link {
+  margin-top: 3rem;
+  a {
+    color: $color-background;
+    text-decoration: none;
+  }
+}
