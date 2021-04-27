@@ -79,13 +79,7 @@ h3 {
 }
 
 .image {
-  display: flex;
-  align-self: center;
   background: #eceff4;
-  height: 100%;
-}
-
-.image {
   img {
     width: 100%;
   }
@@ -158,6 +152,13 @@ h3 {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .section {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+}
+
 //Mini-card
 .mini-card {
   max-width: 226px;
@@ -198,6 +199,7 @@ h3 {
     box-shadow: 0px 5px 23px 0px rgba(202, 213, 221, 0.2);
   }
 }
+
 
 // Characteristic
 .characteristic {
@@ -301,6 +303,19 @@ h3 {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .coffee {
+    .grid--1x2 {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
 //Combo Section
 .combo {
   &__card {
@@ -324,6 +339,24 @@ h3 {
 
   &__image {
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .combo {
+    padding: 0 5vw;
+    .grid--1x3 {
+      grid-template-columns: 1fr;
+      row-gap: 4vh;
+    }
+
+    .card__container {
+      flex-direction: row;
+    }
+    
+    &__card {
+      max-width: 100%;
+    }
   }
 }
 
