@@ -43,100 +43,41 @@ h3 {
   line-height: 1.1;
 }
 
-//Mini-card
-.mini-card {
-  max-width: 226px;
-
-  &__heading,
-  &__description {
-    text-align: center;
-  }
-
-  &__heading {
-    margin-top: 4.2rem;
-  }
-
-  &__description {
-    margin-top: 1.2rem;
-  }
+//Container
+.container {
+  margin: 0 auto;
+  max-width: 1104px;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid--1x2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2.3vw 2vw;
+}
+
+.grid--1x3,
+.grid--1x4 {
+  grid-column-gap: 2vw;
+}
+.grid--1x3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--1x4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+//Images
 .icon {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 
-// Section Header
-.section {
-  background-color: $color-background;
-  padding: 9.14vw 0 6.21vw;
-
-  &__header {
-    text-align: center;
-    margin-bottom: 7.2rem;
-  }
-
-  &__subtitle {
-    color: $color-font;
-  }
-}
-
-.subtitle {
-  font-weight: 400;
-  font-size: 2rem;
-}
-//Card
-
-.card {
-  padding: 0 4.2rem;
-  background: #fff;
-
-  &__subtitle {
-    margin: 4.2rem 0 0.5rem;
-    color: $color-accent;
-  }
-
-  &__container {
-    display: flex;
-  }
-
-  &__heading {
-    margin-bottom: 2.4rem;
-  }
-
-  &--toggled {
-    box-shadow: 0px 5px 23px 0px rgba(202, 213, 221, 0.2);
-  }
-}
-
-// Characteristic
-.characteristic {
-  display: flex;
-  align-items: center;
-  margin: 2.4rem 0 4.6rem;
-
-  &__container {
-    display: flex;
-  }
-
-  &__text {
-    color: $color-primary;
-    display: flex;
-    flex-direction: column;
-    margin-left: 2rem;
-
-    &--bold {
-      font-weight: 600;
-    }
-  }
-
-  &--remote {
-    margin-right: 5vw;
-  }
-}
-
-// Image
 .image {
   display: flex;
   align-self: center;
@@ -144,8 +85,10 @@ h3 {
   height: 100%;
 }
 
-.image > img {
-  width: 100%;
+.image {
+  img {
+    width: 100%;
+  }
 }
 
 .image--whole {
@@ -194,92 +137,91 @@ h3 {
   padding: 0 2.4rem;
 }
 
-//Container
-.container {
-  margin: 0 auto;
-  max-width: 1104px;
-}
 
-.grid {
-  display: grid;
-}
+// Section Header
+.section {
+  background-color: $color-background;
+  padding: 9.14vw 0 6.21vw;
 
-.grid--1x2 {
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2.3vw 2vw;
-}
-
-.grid--1x3,
-.grid--1x4 {
-  grid-column-gap: 2vw;
-}
-.grid--1x3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--1x4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-//Coffee
-.coffee {
-  &__card {
-    width: 23.14vw;
-    max-width: 324px;
-  }
-
-  &__buttons {
-    margin-top: 3.4rem;
-  }
-}
-
-//Combo
-.combo {
-  &__card {
-    flex-direction: column;
-    width: 25.7vw;
-    max-width: 360px;
+  &__header {
+    text-align: center;
+    margin-bottom: 7.2rem;
   }
 
   &__subtitle {
-    span {
-      color: $color-primary;
-      font-size: 1.4rem;
-      text-decoration: line-through;
-      margin-left: 1.9rem;
-    }
-  }
-
-  &__buttons {
-    margin-top: 3.2rem;
-  }
-
-  &__image {
-    margin: 0 auto;
+    color: $color-font;
   }
 }
 
-.gift {
-  &__buttons {
-    justify-items: start;
+.subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+//Mini-card
+.mini-card {
+  max-width: 226px;
+
+  &__heading,
+  &__description {
+    text-align: center;
   }
 
-  &__card {
-    width: 56.6vw;
+  &__heading {
+    margin-top: 4.2rem;
   }
 
-  &__image {
-    position: relative;
-    z-index: 0;
-    &:before {
-      background: #fff;
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      z-index: -1;
+  &__description {
+    margin-top: 1.2rem;
+  }
+}
+
+//Card
+.card {
+  padding: 0 4.2rem;
+  background: #fff;
+
+  &__subtitle {
+    margin: 4.2rem 0 0.5rem;
+    color: $color-accent;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+  }
+
+  &--toggled {
+    box-shadow: 0px 5px 23px 0px rgba(202, 213, 221, 0.2);
+  }
+}
+
+// Characteristic
+.characteristic {
+  display: flex;
+  align-items: center;
+  margin: 2.4rem 0 4.6rem;
+
+  &__container {
+    display: flex;
+  }
+
+  &__text {
+    color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+
+    &--bold {
+      font-weight: 600;
     }
+  }
+
+  &--remote {
+    margin-right: 5vw;
   }
 }
 
@@ -312,7 +254,7 @@ h3 {
   }
 }
 
-//Main
+//Main Section
 .main {
   background-color: $color-background;
   position: relative;
@@ -331,6 +273,7 @@ h3 {
 .image--logo {
   margin-top: 7.2rem;
 }
+
 .heading {
   display: flex;
   flex-direction: column;
@@ -345,3 +288,67 @@ h3 {
     padding: 0.5rem 1rem;
   }
 }
+
+//Coffee Section
+.coffee {
+  &__card {
+    width: 23.14vw;
+    max-width: 324px;
+  }
+
+  &__buttons {
+    margin-top: 3.4rem;
+  }
+}
+
+//Combo Section
+.combo {
+  &__card {
+    flex-direction: column;
+    justify-self: center;
+    max-width: 360px;
+  }
+
+  &__subtitle {
+    span {
+      color: $color-primary;
+      font-size: 1.4rem;
+      text-decoration: line-through;
+      margin-left: 1.9rem;
+    }
+  }
+
+  &__buttons {
+    margin-top: 3.2rem;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+}
+
+//Gift Section
+.gift {
+  &__buttons {
+    justify-items: start;
+  }
+
+  &__card {
+    width: 56.6vw;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 0;
+    &:before {
+      background: #fff;
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}
+
